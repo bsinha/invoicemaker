@@ -1,4 +1,4 @@
-import {Entity} from './entity';
+//import {Entity} from '../list/entity';
 
 export interface Invoice {
   id: string,

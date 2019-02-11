@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {Invoice} from './invoice';
-import { isNgTemplate } from '@angular/compiler';
 import { InvoiceService } from './invoice.service';
+import { isNgTemplate } from '@angular/compiler';
+import {Invoice} from './invoice';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'invoice-list',
+  templateUrl: './invoice-list.component.html',
+  styleUrls: ['./invoice-list.component.css']
 })
-export class ListComponent implements OnInit {
-  
+export class InvoiceListComponent implements OnInit {
+
+   
   title: string = "Invoices";
   _listFilter: string;
   errorMessage: any ;
@@ -44,5 +45,4 @@ export class ListComponent implements OnInit {
     );
     
   }
-
 }

@@ -27,7 +27,7 @@
         <tbody>
             <tr *ngFor='let item of filteredItems'>
               <td>{{item.id}}</td>
-              <td>{{item.event}}</td>
+              <td><a [routerLink]="['/invoices/',item.id]">{{item.event}}</a></td>
               <td>{{item.eventBy}}</td>
               <td>{{item.eventDate | date}}</td>
               <td>{{item.amount  | currency:'INR': 'symbol': '1.2-2'}}</td>
@@ -36,3 +36,4 @@
     </div>
   </div>
 </div>
+

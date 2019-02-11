@@ -12,9 +12,9 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { HeaderbarComponent } from './headerbar/headerbar.component';
 import { FooterbarComponent } from './footerbar/footerbar.component';
 import { MaincenterComponent } from './maincenter/maincenter.component';
-import { ListComponent } from './list/list.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { InvoiceListComponent } from './invoice/invoice-list.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +25,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderbarComponent,
     FooterbarComponent,
     MaincenterComponent,
-    ListComponent,
     CustomerListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    InvoiceListComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     RouterModule.forRoot([
       {path: 'home', component: MaincenterComponent},
-      {path: 'invoices', component: ListComponent},
+      {path: 'invoices', component: InvoiceListComponent},
       {path: 'invoices/:id', component: InvoiceComponent},
       {path: 'customers', component: CustomerListComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'},
