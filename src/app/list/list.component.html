@@ -1,0 +1,38 @@
+<div class="card">
+  <h5 class="card-header">{{title}}</h5>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">Filter by:</div>
+      <div class="col-md-2">
+        <input type="text"
+        [(ngModel)] = 'listFilter'/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h6>Filtered by: {{listFilter}}</h6>
+      </div>
+    </div>
+    <div class="table-responsive" *ngIf='items && items.length'>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Invoice</th>
+            <th>Event</th>
+            <th>Event By</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let item of filteredItems'>
+              <td>{{item.id}}</td>
+              <td>{{item.event}}</td>
+              <td>{{item.eventBy}}</td>
+              <td>{{item.eventDate | date}}</td>
+              <td>{{item.amount  | currency:'INR': 'symbol': '1.2-2'}}</td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

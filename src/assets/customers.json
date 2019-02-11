@@ -1,0 +1,18 @@
+[
+    {
+      "id": "1",
+      "name": "Abcd",
+      "gst": "1234567",
+      "phone": "1234",
+      "email": "email@email.com",
+      "city": "New Delhi"
+    },
+    {
+        "id": "2",
+        "name": "pqr",
+        "gst": "8901345",
+        "phone": "1234",
+        "email": "email@email.com",
+        "city": "New Delhi"
+      }
+]
